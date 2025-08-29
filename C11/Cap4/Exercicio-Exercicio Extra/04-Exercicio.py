@@ -14,4 +14,4 @@ rendas_america = rendas[america_index]
 local = ds[0:,0]
 contry = local[america_index]
 maiorRenda = np.argmax(rendas_america)
-print(contry[maiorRenda])do Norte: {NAMask}")
+print(contry[maiorRenda])
