@@ -6,20 +6,11 @@ ds = np.loadtxt("paises.csv",
                 dtype=str,
                 encoding="utf-8")
 
-# Máscara para LATIN AMER. & CARIB
-regiao_latam = np.where(ds[:, 1] == "LATIN AMER. & CARIB")
-
-# Extrair renda per capita (coluna 8)
-renda = ds[:, 8]
-renda = np.where(renda == "unknown", "nan", renda).astype(float)
-
-# Selecionar apenas os valores da região
-renda_latam = renda[regiao_latam]
-
-# Encontrar índice do maior
-idx = np.nanargmax(renda_latam)
-
-# Extrair países
-pais = ds[:, 0][regiao_latam][idx]
-
-print(f"País: {pais} (GDP per capita: {renda_latam[idx]})")
+rendas = ds[0:,9]
+region = ds[0:,1]
+america_index = np.where(region == 'LATIN AMER. & CARIB    ')
+rendas_america = rendas[america_index]
+local = ds[0:,0]
+contry = local[america_index]
+maiorRenda = np.argmax(rendas_america)
+print(contry[maiorRenda])
