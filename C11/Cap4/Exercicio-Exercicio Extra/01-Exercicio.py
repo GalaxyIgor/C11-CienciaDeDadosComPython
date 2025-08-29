@@ -5,5 +5,5 @@ ds = np.loadtxt('paises.csv',
                 delimiter=";",
                 dtype=str,
                 encoding='utf-8')
-
+# Fazendo slicing direto
 print(ds[:, 0:6])

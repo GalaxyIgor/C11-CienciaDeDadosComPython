@@ -8,12 +8,7 @@ ds = np.loadtxt('paises.csv',
                 encoding='utf-8')
 
 # Cria máscara para "NORTHERN AMERICA"
-NAMask = ds[:, 1] == "NORTHERN AMERICA"
+NAMask = np.sum(np.char.find(ds,'NORTHERN AMERICA')!= -1)
 
-# Seleciona países
-NA = ds[NAMask]
 
-# Conta quantos são
-qtd = NA.shape[0]
-
-print(f"Quantidade de países na América do Norte: {qtd}")
+print(f"Quantidade de países na América do Norte: {NAMask}")

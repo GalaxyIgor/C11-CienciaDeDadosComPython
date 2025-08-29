@@ -6,5 +6,6 @@ ds = np.loadtxt('paises.csv',
                 dtype=str,
                 encoding='utf-8')
 
+# contando
 print("Total: ",len(np.unique(ds[:, 1:2])))
 print("Regioes: ",ds[:, 1:2])
