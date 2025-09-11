@@ -47,7 +47,7 @@ print(var[6]) #captura a letra W da String
 print(var[:5]) #captura a palavra Hello
 print(var[6:11]) #captura a palavra World (6 inclusive e 11 exclusive)
 print(var[6:]) #também captura a palavra World
-print(var[0:10:2]) #mostra HloWrd (ou seja, pula de 2 em 2)
+print(var[0:10:2]) #mostra HloWrd (ou seja, pula de 2 0em 2)
 print(var)
 
 # STRUTURAS DE DECISÃO

@@ -85,3 +85,5 @@ Desktop.ini
 *.pem
 *.crt
 *.secret
+
+.idea/
